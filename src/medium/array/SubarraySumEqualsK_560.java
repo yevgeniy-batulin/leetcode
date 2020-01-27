@@ -1,5 +1,6 @@
 package medium.array;
 
+// https://leetcode.com/problems/subarray-sum-equals-k/
 class SubarraySumEqualsK_560 {
     public int subarraySum(int[] nums, int k) {
         if (nums.length == 1) return k == nums[0] ? 1 : 0;
