@@ -20,6 +20,6 @@ class SubarraySumEqualsK_560 {
     }
 
     public static void main(String[] args) {
-        System.out.println(new SubarraySumEqualsK_560().subarraySum(new int[]{0,0,0,0,0,0,0,0,0,0}, 0));
+        System.out.println(new SubarraySumEqualsK_560().subarraySum(new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, 0));
     }
 }
