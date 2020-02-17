@@ -1,5 +1,9 @@
 package medium.linkedlist;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.TreeSet;
+
 // https://leetcode.com/problems/add-two-numbers/
 class AddTwoNumbers_2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -30,5 +34,9 @@ class AddTwoNumbers_2 {
         ListNode(int x) {
             val = x;
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(String.valueOf(-1).charAt(0));
     }
 }
