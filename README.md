@@ -4,9 +4,10 @@ Solved:
 
 October:
 25.10 - 1290, 599, 733, 938
+27.10 - 112 
 
 Done with help:
-543
+543, 993
 
 Done by myself but need attention:
 160
