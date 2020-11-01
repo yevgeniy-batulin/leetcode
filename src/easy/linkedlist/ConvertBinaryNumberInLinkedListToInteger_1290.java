@@ -2,14 +2,12 @@ package easy.linkedlist;
 
 class ConvertBinaryNumberInLinkedListToInteger_1290 {
     public int getDecimalValue(ListNode head) {
-        int number = 0;
-        while (head.next != null) {
-            number += head.val;
-            number <<= 1;
+        int value = 0;
+        while(head != null) {
+            value = (value * 2) + head.val;
             head = head.next;
         }
-        number += head.val;
-        return number;
+        return value;
     }
 
     static class ListNode {
