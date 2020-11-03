@@ -11,9 +11,11 @@ October:
 
 November:
 1.11 - 252, 453, 892
+2.11 - 147, 198, 746
+3.11 - 1446, 1137, 1010, 359
 
 Done with help:
-543, 993, 720, 628
+543, 993, 720, 628, 204
 
 Done by myself but need attention:
 160, 231, 9
