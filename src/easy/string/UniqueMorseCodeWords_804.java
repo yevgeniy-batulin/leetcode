@@ -19,4 +19,8 @@ class UniqueMorseCodeWords_804 {
 
         return set.size();
     }
+
+    public static void main(String[] args) {
+        System.out.println(Math.atan2(1, 1));
+    }
 }
