@@ -1,0 +1,11 @@
+package easy.math;
+
+public class XOROperationInArray_1486 {
+	public int xorOperation(int n, int start) {
+		int xor = 0;
+		for (int i = 0; i < n; i++) {
+			xor ^= start + 2 * i;
+		}
+		return xor;
+	}
+}
