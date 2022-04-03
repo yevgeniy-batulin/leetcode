@@ -1,14 +1,18 @@
 package easy.math;
 
-class PalindromeNumber_9 {
+public class PalindromeNumber_9 {
     public boolean isPalindrome(int x) {
-        if (x < 0 || (x % 10 == 0 && x != 0)) return false;
+        if(x < 0) {
+            return false;
+        }   
 
-        int reverted = 0;
-        while (x > reverted) {
-            reverted = reverted * 10 + (x % 10);
-            x /= 10;
+        int number = x;
+        int reversedNumber = 0;
+        while(number > 0) {
+            reversedNumber = reversedNumber * 10 + number % 10;
+            number /= 10;
         }
-        return x == reverted || x == reverted / 10;
+
+        return x == reversedNumber;
     }
 }
