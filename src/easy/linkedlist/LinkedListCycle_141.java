@@ -1,27 +1,33 @@
 package easy.linkedlist;
 
 public class LinkedListCycle_141 {
-    public boolean hasCycle(ListNode head) {
-        ListNode slow = head;
-        ListNode fast = head;
+	public boolean hasCycle(ListNode head) {
+		if (head == null || head.next == null) {
+			return false;
+		}
 
-        while (fast != null && fast.next != null) {
-            fast = fast.next.next;
-            slow = slow.next;
+		ListNode slow = head;
+		ListNode fast = head;
 
-            if (fast == slow) return true;
-        }
+		while (fast != null && fast.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
 
-        return false;
-    }
+			if (slow == fast) {
+				return true;
+			}
+		}
 
-    static class ListNode {
-        int val;
-        ListNode next;
+		return false;
+	}
 
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
+	static class ListNode {
+		int val;
+		ListNode next;
+
+		ListNode(int x) {
+			val = x;
+			next = null;
+		}
+	}
 }

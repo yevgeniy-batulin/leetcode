@@ -1,25 +1,23 @@
 package easy.stack;
 
-// https://leetcode.com/problems/reverse-linked-list/
 class ReverseLinkedList_206 {
-    public ListNode reverseList(ListNode head) {
-        ListNode previous = null;
-        ListNode current = head;
-        while (current != null) {
-            ListNode next = current.next;
-            current.next = previous;
-            previous = current;
-            current = next;
-        }
-        return previous;
-    }
+	public ListNode reverseList(ListNode head) {
+		ListNode prev = null;
+		while (head != null) {
+			ListNode temp = head.next;
+			head.next = prev;
+			prev = head;
+			head = temp;
+		}
+		return prev;
+	}
 
-    static class ListNode {
-        int val;
-        ListNode next;
+	static class ListNode {
+		int val;
+		ListNode next;
 
-        ListNode(int x) {
-            val = x;
-        }
-    }
+		ListNode(int x) {
+			val = x;
+		}
+	}
 }
