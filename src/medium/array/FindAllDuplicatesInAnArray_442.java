@@ -1,20 +1,18 @@
 package medium.array;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
-// https://leetcode.com/problems/find-all-duplicates-in-an-array/
 class FindAllDuplicatesInAnArray_442 {
-    public List<Integer> findDuplicates(int[] nums) {
-        List<Integer> result = new ArrayList<>();
-        for (int i = 0; i < nums.length; i++) {
-            int index = Math.abs(nums[i]) - 1;
-            if (nums[index] < 0)
-                result.add(index + 1);
-            else
-                nums[index] = -nums[index];
-        }
-        return result;
-    }
+	public List<Integer> findDuplicates(int[] nums) {
+		List<Integer> duplicates = new ArrayList<>();
+		for (int index = 0; index < nums.length; index++) {
+			if (nums[Math.abs(nums[index]) - 1] < 0) {
+				duplicates.add(Math.abs(nums[index]));
+			}
+			nums[Math.abs(nums[index]) - 1] *= -1;
+		}
+
+		return duplicates;
+	}
 }
